@@ -44,6 +44,7 @@ export class AppController {
   @Get('/callback')
   async test(@Query() query: Record<string, any>, @Res() res: Response) {
     const { code, error, error_description } = query;
+    console.log('test');
 
     if (error) {
       return res.redirect(
